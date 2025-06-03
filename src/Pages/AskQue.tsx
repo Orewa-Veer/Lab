@@ -4,6 +4,7 @@ import { FaSearch, FaSortAmountDown } from "react-icons/fa";
 import { FiFilter } from "react-icons/fi";
 import QuestionGrid from "./QuestionGrid";
 import { Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AskQue = () => {
   return (
@@ -20,15 +21,18 @@ const AskQue = () => {
         </div>
         <div>
           <Button className="bg-[#059669] text-white rounded font-medium">
-            Ask Question
+            <Link to={"/popup"}> Ask Question</Link>
           </Button>
         </div>
       </div>
       {/*Top -Search */}
       <div className="flex flex-col md:flex-row gap-4 mb-6 justify-between">
-        <div className="flex items-center flex-1">
-          <Search className="relative left-7 top-1.75  h-4 w-4 -translate-y-1/2 text-muted-foreground " />
-          <Input placeholder="Seach questiosn..." className="pl-10" />
+        <div className="flex items-center flex-1 border border-input rounded-md">
+          <Search className="relative left-2 top-1.75  h-4 w-4 -translate-y-1/2 text-muted-foreground " />
+          <Input
+            placeholder="Seach questiosn..."
+            className=" border-none px-4"
+          />
         </div>
 
         <div className="flex justify-between gap-2">

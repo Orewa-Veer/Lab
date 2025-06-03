@@ -39,6 +39,7 @@ import {
 import { FaArrowTrendUp, FaRegMessage } from "react-icons/fa6";
 import { FaRegBookmark, FaRegClock } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 // Menu items.
 const items = [
@@ -54,7 +55,7 @@ const items = [
   },
   {
     title: "Trending",
-    url: "/popup",
+    url: "#",
     icon: FaArrowTrendUp,
   },
   {
@@ -70,6 +71,7 @@ const items = [
 ];
 
 export function AppSidebar() {
+  const [active, setactive] = useState("Home");
   return (
     <Sidebar className="fixed top-10">
       <SidebarContent className="mt-4 ml-3">
@@ -83,8 +85,17 @@ export function AppSidebar() {
           <SidebarGroupContent className="text-sm font-medium">
             <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title} className=" px-4 py-2">
-                  <SidebarMenuButton asChild>
+                <SidebarMenuItem
+                  key={item.title}
+                  className={`${
+                    active === item.title && "bg-emerald-50 text-emerald-600"
+                  } px-4 py-2 hover:bg-emerald-50 hover:text-emerald-600 `}
+                >
+                  <SidebarMenuButton
+                    className="hover:bg-emerald-50 hover:text-emerald-600"
+                    asChild
+                    onClick={() => setactive(item.title)}
+                  >
                     <Link to={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
@@ -115,7 +126,7 @@ export function AppSidebar() {
                     <CollapsibleContent className=" ">
                       {DataT.map((data) => (
                         <SidebarMenuSubItem>
-                          <SidebarMenuSubButton>
+                          <SidebarMenuSubButton className="hover:bg-emerald-50 hover:text-emerald-600">
                             <a
                               href="# "
                               className="font-sans text-xs font-medium"
@@ -152,28 +163,28 @@ export function AppSidebar() {
                   <SidebarMenuSub>
                     <CollapsibleContent>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton className="hover:bg-emerald-50 hover:text-emerald-600">
                           <a href="#" className="font-sans text-xs font-medium">
                             Frontend Developers
                           </a>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton className="hover:bg-emerald-50 hover:text-emerald-600">
                           <a href="#" className="font-sans text-xs font-medium">
                             Backend Engineers
                           </a>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton className="hover:bg-emerald-50 hover:text-emerald-600">
                           <a href="#" className="font-sans text-xs font-medium">
                             DevOps & Cloud
                           </a>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
                       <SidebarMenuSubItem>
-                        <SidebarMenuSubButton>
+                        <SidebarMenuSubButton className="hover:bg-emerald-50 hover:text-emerald-600">
                           <a href="#" className="font-sans text-xs font-medium">
                             Mobile Development
                           </a>

@@ -7,6 +7,7 @@ import { FaBullseye } from "react-icons/fa6";
 import { IoBulb } from "react-icons/io5";
 import CardsM from "@/Utilities/CardsM";
 import FooterM from "./FooterM";
+import Latest from "./Latest";
 const HomePage = () => {
   return (
     <div className="flex flex-col">
@@ -333,7 +334,9 @@ const HomePage = () => {
         </div>
       </div>
       {/* Questions*/}
-      <div></div>
+      <div className="py-20 px-6 bg-white/50 backdrop-blur-sm">
+        <Latest />
+      </div>
       {/*Footer */}
       <footer className="flex items-center w-full h-full">
         <FooterM />

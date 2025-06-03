@@ -17,7 +17,7 @@ const QuestionGrid = () => {
 
   return (
     <>
-      <div className="flex flex-wrap gap-3 mb-6">
+      <div className="flex flex-wrap gap-3 mb-6 px-2">
         {TAGS.map((tag) => (
           <Button
             onClick={() => setActiveTag(tag)}

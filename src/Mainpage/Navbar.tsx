@@ -1,10 +1,10 @@
-import React from "react";
-import { FaRegFileCode } from "react-icons/fa6";
-import { Input } from "@/components/ui/input";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { FaRegFileCode } from "react-icons/fa6";
 import { GoBell } from "react-icons/go";
 import { IoMdAdd } from "react-icons/io";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -30,7 +30,7 @@ const Navbar = () => {
                 className="text-white size-6
               "
               />
-              Ask A Question
+              <Link to={"/popup"}> Ask A Question</Link>
             </Button>
           </div>
           <div className="flex mx-5">
