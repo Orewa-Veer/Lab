@@ -1,11 +1,9 @@
-import React from "react";
-import { IoIosRocket } from "react-icons/io";
-import { FaArrowRight, FaCode, FaRegStar } from "react-icons/fa";
-import { FaRegMessage } from "react-icons/fa6";
-import { MdElectricBolt, MdOutlinePeopleAlt } from "react-icons/md";
-import { FaBullseye } from "react-icons/fa6";
-import { IoBulb } from "react-icons/io5";
 import CardsM from "@/Utilities/CardsM";
+import { FaArrowRight, FaCode, FaRegStar } from "react-icons/fa";
+import { FaBullseye, FaRegMessage } from "react-icons/fa6";
+import { IoIosRocket } from "react-icons/io";
+import { IoBulb } from "react-icons/io5";
+import { MdElectricBolt, MdOutlinePeopleAlt } from "react-icons/md";
 import FooterM from "./FooterM";
 import Latest from "./Latest";
 const HomePage = () => {
@@ -14,7 +12,7 @@ const HomePage = () => {
       {/* Colured Section */}
       <div className="flex flex-col items-center justify-between bg-gradient-to-r from-emerald-500/5 to-blue-500/5 px-6 sm:px-8 md:px-10 py-20">
         {/* top button*/}
-        <div className="flex  mb-8 shadow bg-white/80 rounded-full border-emerald-300 text-center border border-emerald-200/5 px-4 py-2 w-78 gap-2 backdrop-blur-sm ">
+        <div className="flex  mb-8 shadow bg-white/80 rounded-full border-emerald-300 text-center border px-4 py-2 w-78 gap-2 backdrop-blur-sm ">
           <IoIosRocket className="text-emerald-700" />
           <span className="text-emerald-700 font-medium text-sm">
             Join 50,000+ developers worldwide
