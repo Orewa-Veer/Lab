@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { FaSearch, FaSortAmountDown } from "react-icons/fa";
-import { FiFilter } from "react-icons/fi";
-import QuestionGrid from "./QuestionGrid";
 import { Search } from "lucide-react";
+import { FaSortAmountDown } from "react-icons/fa";
+import { FiFilter } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import QuestionGrid from "./QuestionGrid";
 
 const AskQue = () => {
   return (

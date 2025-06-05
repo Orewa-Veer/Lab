@@ -1,20 +1,15 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { AppSidebar } from "./components/app-sidebar";
 import HomePage from "./Mainpage/Home";
 import Navbar from "./Mainpage/Navbar";
-import { useEffect, useState } from "react";
-import { useSidebar } from "@/components/ui/sidebar";
-import { Route, Routes } from "react-router-dom";
-import AskQue from "./Pages/AskQue";
-import FormP from "./Pages/FormP";
 import AskPop from "./Pages/AskPop";
+import AskQue from "./Pages/AskQue";
 function App() {
   const [isSidebarOpen, setSidebar] = useState(true);
 
-  const changeWidth = () => {
-    setSidebar(!isSidebarOpen);
-  };
   useEffect(() => {
     const isSmallScreen = window.innerWidth < 768; // Tailwind `md` breakpoint
     setSidebar(!isSmallScreen);

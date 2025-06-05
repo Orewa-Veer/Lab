@@ -1,21 +1,9 @@
 import {
-  Calendar,
-  ChevronDown,
-  Home,
-  Inbox,
-  Search,
-  Settings,
-} from "lucide-react";
-import { DataT } from "@/Data/Tags";
-import { BsTags } from "react-icons/bs";
-import { MdOutlinePeopleAlt } from "react-icons/md";
-import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
-  SidebarHeader,
   SidebarMenu,
   SidebarMenuBadge,
   SidebarMenuButton,
@@ -23,23 +11,20 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-  SidebarTrigger,
 } from "@/components/ui/sidebar";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@radix-ui/react-dropdown-menu";
+import { DataT } from "@/Data/Tags";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
-import { FaArrowTrendUp, FaRegMessage } from "react-icons/fa6";
-import { FaRegBookmark, FaRegClock } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Home } from "lucide-react";
 import { useState } from "react";
+import { BsTags } from "react-icons/bs";
+import { FaRegBookmark, FaRegClock } from "react-icons/fa";
+import { FaArrowTrendUp, FaRegMessage } from "react-icons/fa6";
+import { MdOutlinePeopleAlt } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 // Menu items.
 const items = [

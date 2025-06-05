@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { dummyQuestions } from "@/Data/Discussion";
-import { DataT } from "@/Data/Tags";
 import CardsM from "@/Utilities/CardsM";
 import { MessageSquare, TrendingDown } from "lucide-react";
 import { Link } from "react-router-dom";

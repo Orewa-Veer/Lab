@@ -1,9 +1,7 @@
-import React from "react";
-import FormP from "./FormP";
-import CardsM from "@/Utilities/CardsM";
-import { SiTicktick } from "react-icons/si";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { MdOutlinePeopleAlt } from "react-icons/md";
+import { SiTicktick } from "react-icons/si";
+import FormP from "./FormP";
 const AskPop = () => {
   return (
     <div className=" flex flex-col p-6 sm:px-10 md:px-15 mx-auto">

@@ -1,7 +1,6 @@
-import React from "react";
 import { FaRegStar } from "react-icons/fa";
 import { IoShieldOutline } from "react-icons/io5";
-import { MdOutlinePeopleAlt, MdPeopleOutline } from "react-icons/md";
+import { MdOutlinePeopleAlt } from "react-icons/md";
 
 const FooterM = () => {
   return (

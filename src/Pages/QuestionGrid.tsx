@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { TAGS } from "@/Data/answert";
 import type { TagType } from "@/Data/answert";
+import { TAGS } from "@/Data/answert";
 import { dummyQuestions } from "@/Data/Discussion";
 import CardsM from "@/Utilities/CardsM";
 import { useState } from "react";
@@ -35,7 +35,7 @@ const QuestionGrid = () => {
             <div className="flex items-start justify-between mb-3 w-full">
               {/*text */}
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 hover:text-emerald-600 cursor-pointer mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 hover:text-primary cursor-pointer mb-2">
                   {obj.title}
                 </h3>
                 <p className="text-gray-600 text-sm mb-3 line-clamp-2">
