@@ -4,13 +4,13 @@ import { MdOutlinePeopleAlt } from "react-icons/md";
 
 const FooterM = () => {
   return (
-    <div className="bg-gradient-to-r from-emerald-500 to-blue-500 w-full flex flex-col items-center p-20">
+    <div className="  rounded-xl bg-white/30 border border-white/40  shadow-inner max-w-6xl  mb-10 w-full flex flex-col items-center p-20">
       {/*Heading */}
-      <h2 className="text-4xl font-bold text-white mb-6">
+      <h2 className="text-4xl font-bold text-gray-800 mb-6">
         Ready to Join the Community?
       </h2>
       {/*description*/}
-      <p className="text-emerald-100 mb-12 text-xl leading-relaxed">
+      <p className="text-gray-600 mb-12 text-xl leading-relaxed">
         Start asking questions, sharing knowledge, and connecting with
         developers worldwide.
       </p>
@@ -21,7 +21,7 @@ const FooterM = () => {
         </button>
       </div>
       {/*Bottom*/}
-      <div className="text-emerald-100 flex justify-around w-[60%] mt-4 font-medium">
+      <div className="text-gray-600 flex justify-around w-[60%] mt-4 font-medium">
         <div className="flex items-center gap-1">
           <IoShieldOutline className="size-5" /> <span>100% Free</span>
         </div>

@@ -58,8 +58,8 @@ const items = [
 export function AppSidebar() {
   const [active, setactive] = useState("Home");
   return (
-    <Sidebar className="fixed top-10">
-      <SidebarContent className="mt-4 ml-3">
+    <Sidebar variant="floating" className="fixed top-10  bg-red-400 ">
+      <SidebarContent className="mt-4 ml-3 shadow-md bg-red-400">
         <SidebarGroup>
           <SidebarGroupLabel className="flex justify-between text-[#059669] font-sans font-bold text-3xl px-3 pb-0">
             <span>Forumly</span>

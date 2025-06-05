@@ -8,7 +8,7 @@ import QuestionGrid from "./QuestionGrid";
 
 const AskQue = () => {
   return (
-    <div className="p-6 sm:px-10 md:px-20 mx-auto">
+    <div className="p-6 pt-22 sm:px-10 md:px-20 mx-auto">
       {/*Top - questions */}
       <div className="flex w-full justify-between mx-auto mb-8">
         <div>

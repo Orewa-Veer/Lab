@@ -6,6 +6,7 @@ import CardsM from "@/Utilities/CardsM";
 import { useState } from "react";
 import { FaRegBookmark, FaRegEye } from "react-icons/fa6";
 import { IoShareSocial } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const QuestionGrid = () => {
   const [activeTag, setActiveTag] = useState<TagType>("All");
@@ -36,7 +37,7 @@ const QuestionGrid = () => {
               {/*text */}
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 hover:text-primary cursor-pointer mb-2">
-                  {obj.title}
+                  <Link to={"/discussion"}> {obj.title}</Link>
                 </h3>
                 <p className="text-gray-600 text-sm mb-3 line-clamp-2">
                   {obj.content}

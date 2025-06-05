@@ -8,24 +8,28 @@ import FooterM from "./FooterM";
 import Latest from "./Latest";
 const HomePage = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pt-16 px-3">
       {/* Colured Section */}
-      <div className="flex flex-col items-center justify-between bg-gradient-to-r from-emerald-500/5 to-blue-500/5 px-6 sm:px-8 md:px-10 py-20">
+      <div className="flex flex-col items-center justify-between bg-gradient-to-br from-emerald-300 to-blue-300 px-6 sm:px-8 md:px-10 py-20">
         {/* top button*/}
-        <div className="flex  mb-8 shadow bg-white/80 rounded-full border-emerald-300 text-center border px-4 py-2 w-78 gap-2 backdrop-blur-sm ">
+        <div className="flex  mb-8 shadow-md bg-white/20 rounded-full border-white/20 text-center border px-4 py-2 w-78 gap-2 backdrop-blur-sm hover:bg-white/50 hover:backdrop-blur-md ">
           <IoIosRocket className="text-emerald-700" />
           <span className="text-emerald-700 font-medium text-sm">
             Join 50,000+ developers worldwide
           </span>
         </div>
         {/* Tagline */}
-        <h1 className="text-6xl font-bold text-gray-900 mb-8 leading-tight  ">
+        <h1 className="text-6xl font-extrabold text-gray-900 drop-shadow-md  mb-8 leading-tight  ">
           Where Developers <br />
-          <span className="bg-gradient-to-r from-purple-600 to-emerald-600 bg-clip-text text-transparent">
+          <span
+            className="bg-gradient-to-r from-indigo-600 to-violet-600
+ bg-clip-text text-transparent"
+          >
             {" "}
             Ask, Learn & Grow
           </span>
         </h1>
+
         {/* Description*/}
         <div className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
           Join our thriving community of developers. Ask questions, share
@@ -34,13 +38,13 @@ const HomePage = () => {
         </div>
         {/* Buttons */}
         <div className="flex flex-col sm:flex sm:flex-row gap-6 justify-center mb-16">
-          <button className="bg-emerald-600 text-white rounded px-6 py-2 hover:bg-emerald-700">
+          <button className="bg-white/20 border border-white/30 backdrop-blur-sm shadow-md transition-all duration-200 rounded-lg text-black  px-6 py-2 hover:bg-white/30">
             <a href="" className="flex items-center gap-2 font-medium text-lg">
               <span>Start Exploring</span>
               <FaArrowRight />
             </a>
           </button>
-          <button className="bg-white text-emerald-600 rounded px-6 py-2 border border-emerald-600 hover:bg-emerald-50 hover:text-black hover:border-emerald-700">
+          <button className="bg-white/80 text-emerald-700 border border-emerald-500 backdrop-blur-sm font-semibold px-4 py-2 rounded-lg shadow-lg hover:bg-white hover:text-emerald-800 transition-all duration-200  ">
             <a href="" className="flex items-center gap-2 font-medium text-lg">
               <span>Ask A Quesiton</span>
               <FaRegMessage />
@@ -72,7 +76,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* Why Chosse Section*/}
-      <div className="flex flex-col items-center py-20 px-6 sm:px-8 md:px-10 backdrop-blur-sm bg-white/50">
+      <div className="flex flex-col items-center py-20 px-6 sm:px-8 md:px-10 backdrop-blur-sm bg-gradient-to-bl from-blue-300 to-emerald-300">
         {/* Heading*/}
         <div className="mb-16 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -154,7 +158,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* Treding Tech*/}
-      <div className="py-20 px-6 sm:px-8 md:px-10    ">
+      <div className="py-20 px-6 sm:px-8 md:px-10   bg-gradient-to-br from-emerald-300 to-blue-300 ">
         {/* Heading*/}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -332,13 +336,14 @@ const HomePage = () => {
         </div>
       </div>
       {/* Questions*/}
-      <div className="py-20 px-6 bg-white/50 backdrop-blur-sm">
+      <div className="pt-20 space-y-12 px-6 bg-gradient-to-bl from-blue-300 to-emerald-300 backdrop-blur-sm">
         <Latest />
+
+        {/*Footer */}
+        <footer className="flex items-center w-full h-full  ">
+          <FooterM />
+        </footer>
       </div>
-      {/*Footer */}
-      <footer className="flex items-center w-full h-full">
-        <FooterM />
-      </footer>
     </div>
   );
 };

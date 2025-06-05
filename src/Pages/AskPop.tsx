@@ -4,7 +4,7 @@ import { SiTicktick } from "react-icons/si";
 import FormP from "./FormP";
 const AskPop = () => {
   return (
-    <div className=" flex flex-col p-6 sm:px-10 md:px-15 mx-auto">
+    <div className=" flex flex-col p-6 pt-22 sm:px-10 md:px-15 mx-auto">
       {/*Top */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">

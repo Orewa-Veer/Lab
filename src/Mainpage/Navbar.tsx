@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <div className="flex justify-between px-6 h-full bg-white w-full">
+      <div className="flex justify-between px-6 h-full  w-full">
         <div className="flex">
           <FaRegFileCode className="m-3 mr-0 size-10 text-[#059669]" />
           <span className=" m-3 font-bold text-4xl text-[#059669]">
