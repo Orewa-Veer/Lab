@@ -7,7 +7,6 @@ import {
   MessageSquare,
   TrendingDown,
 } from "lucide-react";
-import { BsQuestionSquare } from "react-icons/bs";
 import { FaRegClock } from "react-icons/fa6";
 
 const MyTest = () => {
