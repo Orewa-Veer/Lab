@@ -5,8 +5,11 @@ import { GlassSidebar } from "./Mainpage/Glasspane";
 import HomePage from "./Mainpage/Home";
 import Navbar from "./Mainpage/Navbar";
 import AskPop from "./Pages/AskPop";
-import AskQue from "./Pages/AskQue";
+// import AskQue from "./Pages/AskQue";
 import Discussion from "./Pages/Discussion";
+import AskQue from "./Pages/AskQue";
+import Bookmark from "./Pages/Bookmark";
+import UserPage from "./Pages/UserPage";
 function App() {
   const [isSidebarOpen, setSidebar] = useState(false);
 
@@ -48,6 +51,8 @@ function App() {
             <Route path="/questions" element={<AskQue />}></Route>
             <Route path="/popup" element={<AskPop />}></Route>
             <Route path="/discussion" element={<Discussion />}></Route>
+            <Route path="/bookmark" element={<Bookmark />}></Route>
+            <Route path="/user" element={<UserPage />}></Route>
           </Routes>
         </main>
       </div>

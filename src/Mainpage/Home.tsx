@@ -6,6 +6,7 @@ import { IoBulb } from "react-icons/io5";
 import { MdElectricBolt, MdOutlinePeopleAlt } from "react-icons/md";
 import FooterM from "./FooterM";
 import Latest from "./Latest";
+
 const HomePage = () => {
   return (
     <div className="flex flex-col pt-16 px-3">
@@ -55,23 +56,37 @@ const HomePage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto ">
           <CardsM>
             <MdOutlinePeopleAlt className="size-10 text-blue-600 mx-auto mb-3" />
-            <span className="text-3xl font-bold text-gray-900 mb-2">50K+</span>
-            <span className="text-sm text-gray-600">Active Developers</span>
+            <div className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-gray-900 mb-2">
+                50K+
+              </span>
+              <span className="text-sm text-gray-600">Active Developers</span>
+            </div>
           </CardsM>
           <CardsM>
             <FaRegMessage className="size-10 text-green-600 mx-auto mb-3" />
-            <span className="text-3xl font-bold text-gray-900 mb-2">125K+</span>
-            <span className="text-sm text-gray-600">Questions Answered</span>
+            <div className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-gray-900 mb-2">
+                125K+
+              </span>
+              <span className="text-sm text-gray-600">Questions Answered</span>
+            </div>
           </CardsM>
           <CardsM>
             <FaBullseye className="size-10 text-purple-600 mx-auto mb-3" />
-            <span className="text-3xl font-bold text-gray-900 mb-2">98%</span>
-            <span className="text-sm text-gray-600">Success Rate</span>
+            <div className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-gray-900 mb-2">98%</span>
+              <span className="text-sm text-gray-600">Success Rate</span>
+            </div>
           </CardsM>
           <CardsM>
             <FaRegStar className="size-10 text-yellow-600 mx-auto mb-3" />
-            <span className="text-3xl font-bold text-gray-900 mb-2">2.5K</span>
-            <span className="text-sm text-gray-600">Expert Contributors</span>
+            <div className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-gray-900 mb-2">
+                2.5K
+              </span>
+              <span className="text-sm text-gray-600">Expert Contributors</span>
+            </div>
           </CardsM>
         </div>
       </div>

@@ -39,7 +39,7 @@ const items = [
     icon: FaRegMessage,
   },
   {
-    title: "Trending",
+    title: "Rent",
     url: "#",
     icon: FaArrowTrendUp,
   },
@@ -50,7 +50,7 @@ const items = [
   },
   {
     title: "Bookmark",
-    url: "#",
+    url: "/bookmark",
     icon: FaRegBookmark,
   },
 ];

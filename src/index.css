@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Edu+SA+Hand:wght@400..700&family=Iceland&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -39,11 +40,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-Edu: Edu SA Hand, serif;
+  --font-iceland: Iceland, sans-serif;
 }
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: oklch(80.8% 0.114 19.571); /*background primary*/
+
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -51,7 +55,7 @@
   --popover-foreground: oklch(0.145 0 0);
   --primary: #059669;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: #2563eb;
+  --secondary: oklch(80.9% 0.105 251.813); /*backgroundseconaday*/
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
