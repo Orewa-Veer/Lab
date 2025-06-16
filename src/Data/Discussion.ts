@@ -16,7 +16,7 @@ interface User {
 }
 
 // Reply (recursive)
-interface Reply {
+export interface Reply {
   id: string;
   questionId: string;
   parentId: string | null;
@@ -45,7 +45,8 @@ export const users: User[] = [
     id: "u1",
     name: "Veer Sharma",
     username: "veerdev",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jay",
+
+    avatar: " https://api.dicebear.com/7.x/avataaars/svg?seed=Grumpy",
     bio: "Learning React, loving forums. Building side projects to stay sane.",
     email: "veer@forumapp.dev",
     location: "Dehradun, India",
@@ -90,7 +91,7 @@ export const users: User[] = [
     id: "u4",
     name: "Riya Kapoor",
     username: "riya.ui",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Grumpy",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jay",
     bio: "UI designer turned frontend dev. Trying to keep my CSS clean.",
     email: "riya@forumapp.dev",
     location: "Bangalore, India",

@@ -1,4 +1,4 @@
-interface Types {
+export interface Types {
   id: number;
   title: string;
   views: number;

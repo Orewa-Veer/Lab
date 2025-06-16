@@ -2,9 +2,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { FaRegFileCode } from "react-icons/fa6";
-import { GoBell } from "react-icons/go";
 import { IoMdAdd } from "react-icons/io";
 import { Link } from "react-router-dom";
+import NotificationsDropdown from "./BellIcon";
 
 const Navbar = () => {
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
             Forumly
           </span>
         </div>
-        <div className="flex items-center">
+        <div className=" items-center hidden lg:flex">
           <Input
             className="bg-[#F9FAFB] h-10 w-[45vw] "
             placeholder="Search Question, tags here"
@@ -34,7 +34,8 @@ const Navbar = () => {
             </Button>
           </div>
           <div className="flex mx-5">
-            <GoBell className="text-2xl " />
+            {/* <GoBell className="text-2xl " /> */}
+            <NotificationsDropdown />
             <span className="rounded-full bg-[#EF4444] text-white  size-4 text-xs text-center relative -top-3 -left-1 ">
               2
             </span>

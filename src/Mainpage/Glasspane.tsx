@@ -1,14 +1,9 @@
 import { users } from "@/Data/Discussion";
 import { DataT } from "@/Data/Tags";
-import { Home, X } from "lucide-react";
+import { Bell, Home, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { BsTags } from "react-icons/bs";
-import {
-  FaArrowTrendUp,
-  FaRegBookmark,
-  FaRegClock,
-  FaRegMessage,
-} from "react-icons/fa6";
+import { FaRegBookmark, FaRegClock, FaRegMessage } from "react-icons/fa6";
 import { MdOutlinePeopleAlt } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 
@@ -16,7 +11,7 @@ const menuItems = [
   { title: "Home", url: "/", icon: <Home size={18} /> },
   { title: "Questions", url: "/questions", icon: <FaRegMessage size={18} /> },
   { title: "Bookmark", url: "/bookmark", icon: <FaRegBookmark size={18} /> },
-  { title: "Trending", url: "#", icon: <FaArrowTrendUp size={18} /> },
+  { title: "Notifications", url: "/notifications", icon: <Bell size={18} /> },
   { title: "Recent", url: "#", icon: <FaRegClock size={18} /> },
 ];
 interface Prop {

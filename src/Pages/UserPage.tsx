@@ -1,6 +1,7 @@
 import { discussion, users } from "@/Data/Discussion";
 import PageCover from "./PageCover";
 import QuestionCards from "@/Utilities/QuestionCards";
+import { BgColor } from "@/Utilities/BgColor";
 
 const UserPage = () => {
   const UserQues = discussion.filter((disc) =>
@@ -55,8 +56,8 @@ const UserPage = () => {
       <div></div>
       {/* Content  */}
       <div className="space-y-3">
-        {UserQues.map((post) => (
-          <QuestionCards obj={post} />
+        {UserQues.map((post, index) => (
+          <QuestionCards obj={post} color={BgColor[index % BgColor.length]} />
         ))}
       </div>
     </PageCover>

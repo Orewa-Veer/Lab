@@ -3,6 +3,7 @@ import PageCover from "./PageCover";
 import { discussion, users } from "@/Data/Discussion";
 
 import QuestionCards from "@/Utilities/QuestionCards";
+import { BgColor } from "@/Utilities/BgColor";
 
 const Bookmark = () => {
   const reqQues = discussion.filter((disc) =>
@@ -13,14 +14,14 @@ const Bookmark = () => {
       {/* Body */}
       <div>
         {/* top div -heading */}
-        <div className="space-y-3">
-          <h1 className="flex gap-2 text-4xl font-bold text-shadow-2xs  ">
-            <BookmarkIcon className="text-emerald-700 size-10" />{" "}
+        <div className="space-y-3 mb-15">
+          <h1 className="flex gap-2 text-6xl font-bold text-shadow-2xs  ">
+            <BookmarkIcon className="text-emerald-700 size-17" />{" "}
             <span className="bg-gradient-to-r from-red-900 to-blue-900 bg-clip-text text-transparent">
               Bookmarks
             </span>
           </h1>
-          <p className="text-gray-600 pl-13">
+          <p className="text-gray-600 pl-13 italic">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, cum
             eos repudiandae iusto facilis accusamus nobis optio dignissimos
             dolor, veritatis consectetur sunt sed, in harum quod dolore
@@ -31,8 +32,8 @@ const Bookmark = () => {
         <div></div>
         {/* questions bookmarked */}
         <div className="space-y-3 mt-3">
-          {reqQues.map((req) => (
-            <QuestionCards obj={req} />
+          {reqQues.map((req, index) => (
+            <QuestionCards obj={req} color={BgColor[index % BgColor.length]} />
           ))}
         </div>
       </div>

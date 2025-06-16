@@ -10,6 +10,7 @@ import Discussion from "./Pages/Discussion";
 import AskQue from "./Pages/AskQue";
 import Bookmark from "./Pages/Bookmark";
 import UserPage from "./Pages/UserPage";
+import NotificationsPage from "./Pages/notifications";
 function App() {
   const [isSidebarOpen, setSidebar] = useState(false);
 
@@ -50,9 +51,13 @@ function App() {
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/questions" element={<AskQue />}></Route>
             <Route path="/popup" element={<AskPop />}></Route>
-            <Route path="/discussion" element={<Discussion />}></Route>
+            <Route path="/discussion/:id" element={<Discussion />}></Route>
             <Route path="/bookmark" element={<Bookmark />}></Route>
             <Route path="/user" element={<UserPage />}></Route>
+            <Route
+              path="/notifications"
+              element={<NotificationsPage />}
+            ></Route>
           </Routes>
         </main>
       </div>

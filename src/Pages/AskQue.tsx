@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ComboboxDemo } from "@/Utilities/Buttons/Sorting";
 import { Search } from "lucide-react";
 import { FaSortAmountDown } from "react-icons/fa";
 import { FiFilter } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import QuestionGrid from "./QuestionGrid";
 import PageCover from "./PageCover";
+import QuestionGrid from "./QuestionGrid";
+import { useState } from "react";
 
 const AskQue = () => {
+  const [sortType, setSort] = useState<string>("Sort");
   return (
     <PageCover>
       {/*Top - questions */}
@@ -26,6 +29,7 @@ const AskQue = () => {
           </Button>
         </div>
       </div>
+
       {/*Top -Search */}
       <div className="flex flex-col md:flex-row gap-4 mb-6 justify-between">
         <div className="flex items-center flex-1  rounded-md">
@@ -41,14 +45,14 @@ const AskQue = () => {
           </Button>
           <Button className="flex bg-white/80 border-white text-black border hover:bg-gray-200 ">
             <FaSortAmountDown />
-            <span>Sort</span>
+            <ComboboxDemo sortType={sortType} setSort={setSort} />
           </Button>
         </div>
       </div>
       {/* Tags*/}
       <div>
         {" "}
-        <QuestionGrid />
+        <QuestionGrid sort={sortType} />
       </div>
 
       {/* Bottom Buttons*/}

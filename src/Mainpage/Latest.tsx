@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { discussion } from "@/Data/Discussion";
+import { BgColor } from "@/Utilities/BgColor";
 import QuestionCards from "@/Utilities/QuestionCards";
 import { TrendingDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -31,8 +32,8 @@ const Latest = () => {
       {/*Cards section flex */}
 
       <div className="flex flex-col gap-6 mx-3">
-        {filteredQues.map((filQue) => (
-          <QuestionCards obj={filQue} />
+        {filteredQues.map((filQue, index) => (
+          <QuestionCards obj={filQue} color={BgColor[index % BgColor.length]} />
         ))}
       </div>
       {/*Cards -individual */}

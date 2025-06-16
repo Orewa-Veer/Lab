@@ -6,8 +6,13 @@ import { IoBulb } from "react-icons/io5";
 import { MdElectricBolt, MdOutlinePeopleAlt } from "react-icons/md";
 import FooterM from "./FooterM";
 import Latest from "./Latest";
+import { useRef } from "react";
 
 const HomePage = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const scrollToHero = () => {
+    heroRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="flex flex-col pt-16 px-3">
       {/* Colured Section */}
@@ -40,10 +45,10 @@ const HomePage = () => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex sm:flex-row gap-6 justify-center mb-16">
           <button className="bg-white/20 border border-white/30 backdrop-blur-sm shadow-md transition-all duration-200 rounded-lg text-black  px-6 py-2 hover:bg-white/30">
-            <a href="" className="flex items-center gap-2 font-medium text-lg">
-              <span>Start Exploring</span>
+            <div className="flex items-center gap-2 font-medium text-lg">
+              <span onClick={scrollToHero}>Start Exploring</span>
               <FaArrowRight />
-            </a>
+            </div>
           </button>
           <button className="bg-white/80 text-emerald-700 border border-emerald-500 backdrop-blur-sm font-semibold px-4 py-2 rounded-lg shadow-lg hover:bg-white hover:text-emerald-800 transition-all duration-200  ">
             <a href="" className="flex items-center gap-2 font-medium text-lg">
@@ -91,7 +96,11 @@ const HomePage = () => {
         </div>
       </div>
       {/* Why Chosse Section*/}
-      <div className="flex flex-col items-center py-20 px-6 sm:px-8 md:px-10 backdrop-blur-sm bg-gradient-to-bl from-blue-300 to-emerald-300">
+
+      <div
+        ref={heroRef}
+        className="flex flex-col items-center py-20 px-6 sm:px-8 md:px-10 backdrop-blur-sm bg-gradient-to-bl from-blue-300 to-emerald-300"
+      >
         {/* Heading*/}
         <div className="mb-16 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
