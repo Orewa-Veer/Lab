@@ -3,13 +3,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Edu+SA+Hand:wght@400..700&family=Iceland&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 @custom-variant dark (&:is(.dark *));
-.my-quill-editor .ql-container {
-  @apply border-none shadow-none p-0;
-}
-
-.my-quill-editor .ql-editor {
-  @apply p-4 text-base bg-white;
-}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

@@ -31,7 +31,7 @@ const AskPop = () => {
 
           <div className="flex flex-col  items-center gap-6">
             {/*Guidlines */}
-            <div className=" border rounded-lg bg-card text-card-foreground shadow-sm flex-col w-full items-center ">
+            <CardsM className="  flex-col w-full items-center p-3 hover:-translate-y-1">
               {" "}
               <div className="p-6">
                 <h3 className="font-semibold text-lg items-center gap-2 flex  ">
@@ -66,9 +66,9 @@ const AskPop = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </CardsM>
             {/*Pro tips */}
-            <div className="border  rounded-sm shadow-sm flex-col items-center w-full ">
+            <CardsM className=" flex-col items-center w-full p-3 hover:-translate-y-1">
               {" "}
               <div className="p-6">
                 <h3 className="font-semibold text-lg items-center gap-2 flex  ">
@@ -90,9 +90,9 @@ const AskPop = () => {
                   versions, and what you've tried
                 </div>
               </div>
-            </div>
+            </CardsM>
             {/*Community Stats */}
-            <div className="border  rounded-sm shadow-sm flex-col items-center w-full ">
+            <CardsM className=" flex-col items-center w-full p-3 hover:-translate-y-1">
               <div className="p-6">
                 <h3 className="font-semibold text-lg items-center gap-2 flex  ">
                   <MdOutlinePeopleAlt className="text-purple-600" />
@@ -113,7 +113,7 @@ const AskPop = () => {
                   <span className="font-medium">2.5 hours</span>
                 </div>
               </div>
-            </div>
+            </CardsM>
           </div>
         </div>
       </div>

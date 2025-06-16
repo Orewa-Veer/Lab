@@ -21,7 +21,7 @@ const Discussion = () => {
     <>
       <PageCover>
         {/* Question*/}
-        <div>
+        <div key={discuss.id}>
           <div className="backdrop-blur-lg  bg-white/50 border border-white/80 text-gray-800 rounded-3xl p-6 px-10   shadow-xl  flex gap-2">
             <div className="flex flex-col    space-y-5 items-center  p-3">
               <div className="flex flex-col space-y-5 items-center mt-10 p-3 pl-1">
@@ -52,7 +52,10 @@ const Discussion = () => {
                   </p>
                   <div id="show-tags" className=" flex gap-3">
                     {discuss.tags.map((tag) => (
-                      <div className="rounded-full px-2.5 py-0.5 text-xs bg-white/60 border-emerald-700/80 text-gray-700">
+                      <div
+                        key={tag}
+                        className="rounded-full px-2.5 py-0.5 text-xs bg-white/60 border-emerald-700/80 text-gray-700"
+                      >
                         {tag}
                       </div>
                     ))}
@@ -89,7 +92,7 @@ const Discussion = () => {
           <div className="flex-1 w-full h-fit bg-white/50 rounded-md border-white/80 backdrop-blur-md shadow-md p-3">
             <h2 className="text-2xl ">related tags</h2>
             {discuss.tags.map((tag) => (
-              <div>{tag}</div>
+              <div key={tag}>{tag}</div>
             ))}
           </div>
           {/* medium */}

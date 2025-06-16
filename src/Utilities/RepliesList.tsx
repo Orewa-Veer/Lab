@@ -4,14 +4,14 @@ interface Props {
   replies: Reply[];
 }
 const RepliesList = ({ replies }: Props) => {
-  replies.forEach((rep) => {
-    console.log("rep body: ", rep.body);
-  });
   return (
     <>
       <div className="ml-6 space-y-5 mt-6 text-gray-600 ">
         {replies.map((rep) => (
-          <div className="backdrop-blur-lg shadow-lg  bg-white/20 border border-white/40 px-10 p-6 mx-10 gap-5  flex flex-col rounded-xl">
+          <div
+            key={rep.id}
+            className="backdrop-blur-lg shadow-lg  bg-white/20 border border-white/40 px-10 p-6 mx-10 gap-5  flex flex-col rounded-xl"
+          >
             {/* user which replied */}
             <div className="flex items-center gap-3">
               <img src={rep.user.avatar} alt="" className="size-6" />

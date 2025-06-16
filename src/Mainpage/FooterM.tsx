@@ -10,7 +10,7 @@ const FooterM = () => {
         Ready to Join the Community?
       </h2>
       {/*description*/}
-      <p className="text-gray-600 mb-12 text-xl leading-relaxed">
+      <p className="text-gray-600 mb-12 text-xl leading-relaxed italic font-semibold">
         Start asking questions, sharing knowledge, and connecting with
         developers worldwide.
       </p>

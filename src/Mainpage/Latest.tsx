@@ -12,14 +12,14 @@ const Latest = () => {
       {/*Head */}
       <div className="flex justify-between items-center p-6 mb-16">
         <div>
-          <h2 className="text-4xl font-bold text-shadow-gray-900 mb-4">
+          <h2 className="text-5xl drop-shadow-lg backdrop-blur-lg font-bold text-shadow-gray-900 mb-4">
             Latest Discussions
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 italic font-semibold">
             See what the community is talking about
           </p>
         </div>
-        <Button className="text-[#059669] bg-white border border-emerald-100">
+        <Button className="text-[#059669] bg-white/60 border-white/80 border hover:bg-emerald-100/60">
           <Link
             to={"/popup"}
             className="flex justify-between items-center gap-2"

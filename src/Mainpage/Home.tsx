@@ -7,6 +7,7 @@ import { MdElectricBolt, MdOutlinePeopleAlt } from "react-icons/md";
 import FooterM from "./FooterM";
 import Latest from "./Latest";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -37,7 +38,7 @@ const HomePage = () => {
         </h1>
 
         {/* Description*/}
-        <div className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+        <div className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed italic">
           Join our thriving community of developers. Ask questions, share
           knowledge, and collaborate on solutions that matter. From beginners to
           experts, everyone is welcome to learn and contribute.
@@ -51,10 +52,13 @@ const HomePage = () => {
             </div>
           </button>
           <button className="bg-white/80 text-emerald-700 border border-emerald-500 backdrop-blur-sm font-semibold px-4 py-2 rounded-lg shadow-lg hover:bg-white hover:text-emerald-800 transition-all duration-200  ">
-            <a href="" className="flex items-center gap-2 font-medium text-lg">
+            <Link
+              to="/popup"
+              className="flex items-center gap-2 font-medium text-lg"
+            >
               <span>Ask A Quesiton</span>
               <FaRegMessage />
-            </a>
+            </Link>
           </button>
         </div>
         {/* Cards*/}
@@ -103,11 +107,11 @@ const HomePage = () => {
       >
         {/* Heading*/}
         <div className="mb-16 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl drop-shadow-lg backdrop-blur-lg font-bold text-gray-900 mb-6">
             Why Choose DevForum?
           </h2>
           {/* Description*/}
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl font-semibold text-gray-600 max-w-3xl mx-auto italic">
             Built by developers, for developers. Experience the best way to
             learn and share knowledge.
           </p>
@@ -185,11 +189,11 @@ const HomePage = () => {
       <div className="py-20 px-6 sm:px-8 md:px-10   bg-gradient-to-br from-emerald-300 to-blue-300 ">
         {/* Heading*/}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl drop-shadow-lg backdrop-blur-lg font-bold text-gray-900 mb-6">
             Trending Technologies
           </h2>
           {/* Description*/}
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 italic font-semibold">
             Explore the most discussed technologies and topics
           </p>
         </div>

@@ -33,10 +33,11 @@ const ReplySubmit = ({ discussion, setDiscuss }: Props) => {
           {
             id: newId,
             questionId: prev.id,
+            avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Grumpy",
             parentId: null,
             body: content,
             createdAt: "2025-06-09T16:05:00Z",
-            user: users[4],
+            user: users[0],
             upvotes: 53,
             isSolution: true,
           },

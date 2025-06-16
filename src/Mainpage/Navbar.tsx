@@ -5,6 +5,7 @@ import { FaRegFileCode } from "react-icons/fa6";
 import { IoMdAdd } from "react-icons/io";
 import { Link } from "react-router-dom";
 import NotificationsDropdown from "./BellIcon";
+import { notifications } from "@/Data/notiData";
 
 const Navbar = () => {
   return (
@@ -33,13 +34,13 @@ const Navbar = () => {
               <Link to={"/popup"}> Ask A Question</Link>
             </Button>
           </div>
-          <div className="flex mx-5">
+          <Link to={"/notifications"} className="flex mx-5">
             {/* <GoBell className="text-2xl " /> */}
             <NotificationsDropdown />
             <span className="rounded-full bg-[#EF4444] text-white  size-4 text-xs text-center relative -top-3 -left-1 ">
-              2
+              {notifications.length}
             </span>
-          </div>
+          </Link>
           <div>
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" />

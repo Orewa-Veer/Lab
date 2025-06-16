@@ -62,7 +62,7 @@ const FormP = () => {
       >
         {/*Heading */}
         <div>
-          <h3 className="text-3xl font-semibold leading-none mb-2 tracking-tight flex items-center gap-2 ">
+          <h3 className="text-3xl font-bold leading-none mb-2 tracking-tight flex items-center gap-2 drop-shadow-md ">
             <FaRegQuestionCircle className="text-emerald-600" />
             Question Details
           </h3>
@@ -74,7 +74,7 @@ const FormP = () => {
         <div>
           <label
             htmlFor="in1"
-            className="font-medium text-lg drop-shadow-md opacity-80"
+            className="font-bold text-2xl drop-shadow-md opacity-80"
           >
             Question Title
           </label>
@@ -92,12 +92,15 @@ const FormP = () => {
         {/*Question Description */}
         <div>
           <div className="flex justify-between items-center">
-            <label htmlFor="in2" className="font-semibold">
+            <label
+              htmlFor="in2"
+              className="font-bold text-xl mb-2 drop-shadow-md"
+            >
               Question Description
             </label>
           </div>
           <RichTextEditor value={content} onChange={handleChange} />
-          <p className="text-xs text-gray-500">
+          <p className="text-sm text-gray-500 italic font-semibold mt-2">
             Include all the information someone would need to answer your
             question
           </p>
@@ -111,8 +114,8 @@ const FormP = () => {
           {/*Mid div */}
           <div className="mt-2">
             {/*input */}
-            <div className="min-h-10 border rounded-md  flex items-center p-2 flex-wrap   ">
-              <div className="mt-3  flex flex-wrap gap-2 ">
+            <div className="min-h-10   rounded-md  flex items-center  flex-wrap   ">
+              <div className="mt-3  rounded-md  flex items-center flex-wrap gap-3 p-2 border w-full">
                 {selectedTags.map((data) => (
                   <div
                     className="rounded-md border px-2.5 py-0.5 font-medium text-sm items-center"
@@ -122,6 +125,13 @@ const FormP = () => {
                     {data.title}
                   </div>
                 ))}
+                <input
+                  className="flex-1 border-none focus:outline-none"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="type here"
+                />
               </div>
             </div>
             {/*Tags section */}
@@ -137,7 +147,7 @@ const FormP = () => {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-gray-500 mt-2">
+            <p className="text-xs text-gray-500 mt-2 italic font-semibold">
               Add up to 5 tags to describe what your question is about
             </p>
           </div>
@@ -146,11 +156,11 @@ const FormP = () => {
         <div className="flex justify-start gap-4">
           <Button
             type="submit"
-            className="bg-emerald-500 text-white p-3 rounded font-medium hover:bg-emerald-600"
+            className="bg-emerald-200/60 shadow-lg backdrop-blur-lg text-emerald-800 p-3 rounded-md border-emerald-200/80 font-medium hover:bg-emerald-300/60"
           >
             Post Your Question
           </Button>
-          <Button className="bg-white text-black border rounded p-3 font-medium hover:bg-gray-200">
+          <Button className="bg-white backdrop-blur-lg shadow-lg rounded-md text-black border  p-3 font-medium hover:bg-gray-200">
             {" "}
             Save as Draft
           </Button>

@@ -15,6 +15,7 @@ interface Notification {
   content: string;
   by?: string;
   time: string;
+  read: boolean;
 }
 
 export const iconMap: Record<NotificationType, LucideIcon> = {
@@ -31,6 +32,7 @@ export const notifications: Notification[] = [
     content: 'New Like on your post "How to use Tiptap?"',
     by: "@johndoe",
     time: "2 mins ago",
+    read: false,
   },
   {
     id: "2",
@@ -38,6 +40,7 @@ export const notifications: Notification[] = [
     content: 'New Reply in thread "Best Tailwind Plugins"',
     by: "@frontendguru",
     time: "10 mins ago",
+    read: false,
   },
   {
     id: "3",
@@ -45,6 +48,7 @@ export const notifications: Notification[] = [
     content: "Your post was bookmarked by @coderqueen",
     by: "",
     time: "1 hour ago",
+    read: false,
   },
   {
     id: "4",
@@ -52,5 +56,6 @@ export const notifications: Notification[] = [
     content: "@markdev replied to your comment",
     by: 'in "Dark Mode vs Light Mode Debate"',
     time: "2 hours ago",
+    read: false,
   },
 ];

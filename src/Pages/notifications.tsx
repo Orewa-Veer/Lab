@@ -10,6 +10,7 @@ const notifications = [
     content: 'New Like on your post "How to use Tiptap?"',
     by: "@johndoe",
     time: "2 mins ago",
+    read: false,
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const notifications = [
     content: 'New Reply in thread "Best Tailwind Plugins"',
     by: "@frontendguru",
     time: "10 mins ago",
+    read: false,
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const notifications = [
     content: "Your post was bookmarked by @coderqueen",
     by: "",
     time: "1 hour ago",
+    read: false,
   },
   {
     id: 4,
@@ -31,10 +34,12 @@ const notifications = [
     content: "@markdev replied to your comment",
     by: 'in "Dark Mode vs Light Mode Debate"',
     time: "2 hours ago",
+    read: false,
   },
 ];
 
 export default function NotificationsPage() {
+  const showNoti = notifications.filter((noti) => noti.read === false);
   return (
     <PageCover>
       <div className="max-w-2xl mx-auto p-6 space-y-6">
@@ -53,7 +58,7 @@ export default function NotificationsPage() {
           </div>
         </div>
         <div className="space-y-4">
-          {notifications.map((n) => (
+          {showNoti.map((n) => (
             <CardsM
               key={n.id}
               className="flex items-start gap-3 p-4 rounded-xl shadow-sm border hover:bg-muted transition"
