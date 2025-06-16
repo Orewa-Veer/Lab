@@ -33,7 +33,11 @@ const Bookmark = () => {
         {/* questions bookmarked */}
         <div className="space-y-3 mt-3">
           {reqQues.map((req, index) => (
-            <QuestionCards obj={req} color={BgColor[index % BgColor.length]} />
+            <QuestionCards
+              key={req.id}
+              obj={req}
+              color={BgColor[index % BgColor.length]}
+            />
           ))}
         </div>
       </div>

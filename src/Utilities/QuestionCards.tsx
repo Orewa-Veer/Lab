@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import type { Question } from "@/Data/Discussion";
+import { users, type Question } from "@/Data/Discussion";
 import { MessageSquare } from "lucide-react";
 import { FaRegBookmark, FaRegEye } from "react-icons/fa6";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
@@ -58,6 +58,11 @@ const QuestionCards = ({ obj, color }: Props) => {
           <div className=" flex gap-2 ml-4 ">
             <Button
               className={`px-1.5 py-0.5 bg-gradient-to-br ${color.buttons}  text-black`}
+              onClick={() => {
+                if (users[0].bookmark.includes(obj.id))
+                  return users[0].bookmark.filter((book) => book != obj.id);
+                users[0].bookmark.push(obj.title);
+              }}
             >
               <FaRegBookmark />
             </Button>

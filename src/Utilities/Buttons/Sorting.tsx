@@ -25,7 +25,7 @@ export function ComboboxDemo({ sortType, setSort }: Props) {
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger>{sortType}</PopoverTrigger>
+      <PopoverTrigger asChild>{sortType}</PopoverTrigger>
       <PopoverContent>
         <Command>
           <CommandInput placeholder="Type a command or search..." />

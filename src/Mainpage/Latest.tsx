@@ -33,7 +33,11 @@ const Latest = () => {
 
       <div className="flex flex-col gap-6 mx-3">
         {filteredQues.map((filQue, index) => (
-          <QuestionCards obj={filQue} color={BgColor[index % BgColor.length]} />
+          <QuestionCards
+            key={index}
+            obj={filQue}
+            color={BgColor[index % BgColor.length]}
+          />
         ))}
       </div>
       {/*Cards -individual */}
