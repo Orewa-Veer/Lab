@@ -21,7 +21,7 @@ const Latest = () => {
         </div>
         <Button className="text-[#059669] bg-white/60 border-white/80 border hover:bg-emerald-100/60">
           <Link
-            to={"/popup"}
+            to={"/questions"}
             className="flex justify-between items-center gap-2"
           >
             View All
